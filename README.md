@@ -1,3 +1,21 @@
+# Note: This is Shang's customized version. 
+## Please use the following instructions to install.
+
+```bash
+git clone --depth=1 -b wangshangsam2 --single-branch https://github.com/wangshangsam/vimrc.git ~/.vim_runtime
+bash ~/.vim_runtime/install_shangw_vimrc.sh
+```
+
+## Please use the following instructions to uninstall.
+```bash
+rm -rf ~/.vim_runtime
+rm -rf ~/.vimrc
+rm -rf ~/.vim/bundle
+rm -rf ~/.fonts/ibm_plex
+```
+
+---
+
 ![VIM](https://dnp4pehkvoo6n.cloudfront.net/43c5af597bd5c1a64eb1829f011c208f/as/Ultimate%20Vimrc.svg)
 
 # The Ultimate vimrc
