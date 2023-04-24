@@ -2,7 +2,7 @@
 ## Please use the following instructions to install.
 
 ```bash
-git clone --depth=1 -b wangshangsam2 --single-branch https://github.com/wangshangsam/vimrc.git ~/.vim_runtime
+git clone --depth=1 -b wangshangsam --single-branch https://github.com/wangshangsam/vimrc.git ~/.vim_runtime
 bash ~/.vim_runtime/install_shangw_vimrc.sh
 ```
 
