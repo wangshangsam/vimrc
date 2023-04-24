@@ -3,7 +3,7 @@
 
 ```bash
 git clone --depth=1 -b wangshangsam --single-branch https://github.com/wangshangsam/vimrc.git ~/.vim_runtime
-bash ~/.vim_runtime/install_shangw_vimrc.sh
+bash ~/.vim_runtime/install_shang_vimrc.sh
 ```
 
 ## Please use the following instructions to uninstall.
