@@ -85,7 +85,12 @@ EOM
 
 vim +PluginInstall +qall
 
-pip install black mypy ruff
+if command -v conda &> /dev/null
+then
+  conda install black mypy ruff -c conda-forge
+else
+  pip install black mypy ruff
+fi
 
 # Install YouCompleteMe
 sudo apt install build-essential cmake mono-complete golang nodejs openjdk-17-jdk \
