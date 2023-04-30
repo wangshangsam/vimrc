@@ -97,7 +97,7 @@ cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --all
 
 # Install js-beautify
-npm -g install js-beautify
+sudo npm -g install js-beautify
 
 # Install the ibm plex fonts
 local_fonts=~/.fonts
