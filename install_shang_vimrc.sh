@@ -4,8 +4,6 @@ set -eux
 # Install Vundle
 git clone https://github.com/wangshangsam/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-cd ~/.vim_runtime
-
 cat > ~/.vimrc <<- EOM
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -95,9 +93,11 @@ fi
 # Install YouCompleteMe
 sudo apt install build-essential cmake mono-complete golang nodejs openjdk-17-jdk \
             openjdk-17-jre npm
-current=$(pwd)
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --all
+
+# Install js-beautify
+npm -g install js-beautify
 
 # Install the ibm plex fonts
 local_fonts=~/.fonts
@@ -105,6 +105,5 @@ mkdir -p ${local_fonts}/ibm_plex
 wget https://github.com/IBM/plex/releases/download/v6.1.1/OpenType.zip -P ${local_fonts}
 cd ${local_fonts}
 unzip -q OpenType.zip -d ibm_plex/ && rm -rf OpenType.zip
-cd ${current}
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
