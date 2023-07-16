@@ -91,19 +91,29 @@ else
 fi
 
 # Install YouCompleteMe
-sudo apt install build-essential cmake mono-complete golang nodejs openjdk-17-jdk \
+if [ "$(uname)" == "Darwin" ]; then
+  brew install cmake go nodejs mono java
+  sudo ln -sfn $(brew --prefix java)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+elif [ "$(uname)" == "Linux" ]; then
+  sudo apt install build-essential cmake mono-complete golang nodejs openjdk-17-jdk \
             openjdk-17-jre npm
+else
+  echo "Unsupported system type: $(uname)!"
+  exit 1
+fi
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --all
 
 # Install js-beautify
 sudo npm -g install js-beautify
 
-# Install the ibm plex fonts
-local_fonts=~/.fonts
-mkdir -p ${local_fonts}/ibm_plex
-wget https://github.com/IBM/plex/releases/download/v6.1.1/OpenType.zip -P ${local_fonts}
-cd ${local_fonts}
-unzip -q OpenType.zip -d ibm_plex/ && rm -rf OpenType.zip
+# Install the ibm plex fonts on Ubuntu
+if [ "$(uname)" == "Linux" ]; then
+  local_fonts=~/.fonts
+  mkdir -p ${local_fonts}/ibm_plex
+  wget https://github.com/IBM/plex/releases/download/v6.1.1/OpenType.zip -P ${local_fonts}
+  cd ${local_fonts}
+  unzip -q OpenType.zip -d ibm_plex/ && rm -rf OpenType.zip
+fi
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
