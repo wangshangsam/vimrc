@@ -39,7 +39,7 @@ Plugin 'wangshangsam/Vundle.vim'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
 " Also add Glaive, which is used to configure codefmt's maktaba flags. See
-" `:help :Glaive` for usage.
+" \`:help :Glaive\` for usage.
 Plugin 'google/vim-glaive'
 " ...
 
@@ -58,9 +58,9 @@ filetype plugin indent on    " required
 "
 " Brief help
 " :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PluginInstall    - installs plugins; append \`!\` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append \`!\` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append \`!\` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
