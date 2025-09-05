@@ -1,4 +1,9 @@
 # Note: This is Shang's customized version. 
+
+## Prerequisite
+
+Miniconda: https://docs.conda.io/projects/conda/en/stable/
+
 ## Please use the following instructions to install.
 
 ```bash
@@ -7,6 +12,7 @@ bash ~/.vim_runtime/install_shang_vimrc.sh
 ```
 
 ## Please use the following instructions to uninstall.
+
 ```bash
 rm -rf ~/.vim_runtime
 rm -rf ~/.vimrc
